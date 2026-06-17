@@ -1,19 +1,22 @@
-import {
+import React, {
   createElement,
-  type ElementType,
   forwardRef,
-  type Ref,
   useEffect,
-  type ReactNode,
-  type SyntheticEvent,
   useCallback,
   useRef,
-  type RefObject,
-} from 'react';
+} from "react";
+
+import {
+  ElementType,
+  Ref,
+  ReactNode,
+  SyntheticEvent,
+  RefObject,
+} from "react";
 
 const JSX_RENDER_ID_ATTRIBUTE_NAME = 'data-render-id';
 /** Builds an SVG grid that stretches to the given pixel box */
-export function buildGridPlaceholder(w: number, h: number): string {
+export function buildGridPlaceholder(w,h) {
   const size = Math.max(w, h);
   const svg = `
     <svg width="${size}" height="${size}" viewBox="0 0 895 895" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">

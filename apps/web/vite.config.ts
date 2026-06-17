@@ -45,6 +45,10 @@ export default defineConfig({
       babelConfig: {
         babelrc: false, // don’t merge other Babel files
         configFile: false,
+        presets: [
+          ['@babel/preset-react', { runtime: 'automatic' }],
+          ['@babel/preset-typescript', { allowDeclareFields: true }],
+        ],
         plugins: ['styled-jsx/babel'],
       },
     }),
