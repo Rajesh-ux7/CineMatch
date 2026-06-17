@@ -68,12 +68,13 @@ const getStyleInfo: GetStyleInfo = (resolved) => {
   return { className, styles };
 };
 
-const reselect = initDesignMode(getStyleInfo);
+//const reselect = initDesignMode(getStyleInfo);
 
 // After Vite HMR replaces DOM nodes, re-find the selected element
 // so the design panel stays in sync.
-if (import.meta.hot) {
-  import.meta.hot.on('vite:afterUpdate', () => {
-    reselect();
-  });
-}
+//if (import.meta.hot) {
+//  import.meta.hot.on('react-router:select', () => {
+//    reselect();
+//  });
+//}
+     
